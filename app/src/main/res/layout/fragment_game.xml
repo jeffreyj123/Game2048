@@ -1,0 +1,52 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_alignParentBottom="true"
+    tools:context=".GameFragment">
+
+    <com.example.jeffrey.game_2048.boardUI.GameBoard
+        android:id="@+id/game_board"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" />
+
+    <RelativeLayout
+        android:id="@+id/label_panel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_above="@id/game_board">
+
+        <Button
+            android:id="@+id/button_new_game"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="@string/new_game_label"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:background="@drawable/button_bg" />
+
+        <com.example.jeffrey.game_2048.ScoreView
+            android:id="@+id/current_score"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="10dp"
+            android:layout_centerVertical="true"
+            android:layout_alignBottom="@id/button_new_game"
+            android:layout_alignParentLeft="true" />
+
+        <com.example.jeffrey.game_2048.ScoreView
+            android:id="@+id/best_score"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_marginRight="10dp"
+            android:layout_centerVertical="true"
+            android:layout_alignBottom="@id/button_new_game"
+            android:layout_alignParentRight="true" />
+
+    </RelativeLayout>
+
+</RelativeLayout>
